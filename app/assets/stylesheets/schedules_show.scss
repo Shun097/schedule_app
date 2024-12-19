@@ -1,0 +1,21 @@
+/* 詳細ページ専用のスタイル */
+.show-container {
+    width: 50%; 
+    margin: 30px auto; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .table th,
+  .table td {
+    text-align: left; 
+    padding: 10px; 
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  

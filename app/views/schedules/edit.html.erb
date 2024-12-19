@@ -1,0 +1,44 @@
+<div class="container schedule-form">
+<h1>スケジュール編集</h1>
+
+
+  <% if @schedule.errors.any? %>
+    <div class="alert alert-danger">
+      <h2>登録できません！</h2>
+      <ul>
+        <% @schedule.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= form_with(model: @schedule, local: true) do |form| %>
+  <table class="table">
+    <tr>
+      <th><%= form.label :title, "タイトル" %></th>
+      <td><%= form.text_field :title, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :start_date, "開始日" %></th>
+      <td><%= form.date_field :start_date, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :end_date, "終了日" %></th>
+      <td><%= form.date_field :end_date, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :all_day, "終日" %></th>
+      <td><%= form.check_box :all_day %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :memo, "メモ" %></th>
+      <td><%= form.text_area :memo, rows: 5, cols: 40, class: "form-control" %></td>
+    </tr>
+  </table>
+
+  <div>
+    <%= form.submit "保存", class: "btn btn-success" %>
+    <%= link_to "キャンセル", schedules_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

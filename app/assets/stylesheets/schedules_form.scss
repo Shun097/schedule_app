@@ -1,0 +1,57 @@
+/* 新規作成・編集画面 共通スタイル */
+.schedule-form {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        width: 30%; 
+      }
+    }
+  
+    .btn-container {
+      margin-top: 20px;
+      text-align: center;
+  
+      .btn {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+  
+        &.btn-secondary {
+          background-color: #6c757d;
+        }
+  
+        // &.btn-success {
+        //   background-color: #28a745;
+        // }
+      }
+    }
+  }
+  
